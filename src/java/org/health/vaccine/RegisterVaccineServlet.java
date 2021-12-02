@@ -2,25 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
+package org.health.vaccine;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.db.connection.DBConnection;
 
 /**
  *
  * @author user
  */
-public class SampleServlet extends HttpServlet {
-    DBConnection conn = new DBConnection();
-
+public class RegisterVaccineServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,25 +28,33 @@ public class SampleServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet SampleServlet</title>");            
+            out.println("<title>Servlet RegisterVaccineServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            try{
-                Connection newConn =  conn.getConnection();
-             Statement St =   newConn.createStatement();
-             St.execute("INSERT INTO `vaccines` (`vaccineId`, `totalNumber`, `type`, `status`) VALUES (NULL, '10', 'career', NULL);");
+            boolean redirect  = Boolean.parseBoolean(request.getParameter("redirect"));
+            if(redirect){
+                                         //getParamaters
+            String name =  request.getParameter("name");
+            String quantity =  request.getParameter("quantity");
+            
+            request.setAttribute("type", name);
+            request.setAttribute("totalNumber", quantity);
+            request.setAttribute("registerVaccine", true);
+                RequestDispatcher rd = request.getRequestDispatcher("AddVaccineToDb.jsp");    
+            rd.forward(request, response);
             }
-            catch(SQLException e){
-                
+            else{
+              RequestDispatcher rd = request.getRequestDispatcher("RegisterVaccineForm.jsp");    
+            rd.forward(request, response);
             }
-                
+           
             out.println("</body>");
             out.println("</html>");
         }

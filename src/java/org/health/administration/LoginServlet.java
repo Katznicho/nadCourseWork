@@ -66,7 +66,7 @@ public class LoginServlet extends HttpServlet {
             if(newConn.isClosed()){
                 out.println("no connection");
             }
-                            out.println("There is connection");
+                           // out.println("There is connection");
             
             
                //create statement
@@ -101,7 +101,7 @@ public class LoginServlet extends HttpServlet {
 //               out.println("<h1>email :"+rs.getString("email")+"password"+rs.getString("password")+"</h1>");
                 }
                }
-               newConn.close();
+              // newConn.close();
             out.println("</body>");
             out.println("</html>");
         }

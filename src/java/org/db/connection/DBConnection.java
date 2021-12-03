@@ -15,10 +15,10 @@ import java.sql.Statement;
  * @author user
  */
 public class DBConnection {
-     private String password = "!Log19tan88";
+     private String password = "";
     private String user  ="root";
     private String jbcdriver = "com.mysql.jdbc.Driver";
-    private String jbcUrl = "jdbc:mysql://localhost:3306/servlet";
+    private String jbcUrl = "jdbc:mysql://localhost:3306/nad";
     
 
     

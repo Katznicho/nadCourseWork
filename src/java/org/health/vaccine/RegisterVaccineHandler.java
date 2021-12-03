@@ -45,9 +45,10 @@ public class RegisterVaccineHandler extends SimpleTagSupport {
                        String[] newValues = values.split(",");
                          //int quantity =   Integer.parseInt(newValues[1]);
                      Statement St = newConn.createStatement();
-                     //out.println("Am here man" +newValues[1]+ "another"+newValues[0]+ "The table is" +table);
+                    // out.println("Am here man" +newValues[1]+ "another"+newValues[0]+ "The table is" +table);
                      if(newValues.length > 1){
-          St.execute("INSERT INTO `vaccines` (`vaccineId`, `totalNumber`, `type`, `status`) VALUES (NULL, '"+newValues[1]+"', '"+newValues[0]+"', NULL);");
+          St.execute("INSERT INTO `vaccines` (`vaccineId`, `totalNumber`, `type`, `status`) "
+                  + "VALUES (NULL, '"+newValues[1]+"', '"+newValues[0]+"', NULL);");
                        out.println("<script type='text/javascript'>alert('"+newValues[0]+" added successfully');</script>");
                  out.println("<script type='text/javascript'>window.location='systemadminstrator.jsp'</script>");
       

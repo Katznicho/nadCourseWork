@@ -53,7 +53,9 @@ out.print("Welcome "+name);
 %>  
     </h1>
     
-    <h3>LogOut</h3>
+    <h3 style="cursor:pointer; text-decoration: none;">
+        <a href="/NadCourseWork">LogOut</a>
+    </h3>
     
         
     </div>

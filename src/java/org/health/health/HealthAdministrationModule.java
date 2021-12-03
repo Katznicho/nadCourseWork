@@ -10,4 +10,14 @@ package org.health.health;
  */
 public class HealthAdministrationModule {
     
+//    CREATE TABLE `healthcentres` (
+//  `healthCenterId` int(11) NOT NULL,
+//  `healthCenterName` varchar(255) NOT NULL,
+//  `totalPatients` int(11) NOT NULL,
+//  `totalVaccines` int(11) NOT NULL,
+//  `receiveDate` date  NULL,
+//  `receiveMonth` varchar(255)  NULL,
+//  `vaccineName` varchar(255)  NULL
+//)
+    
 }

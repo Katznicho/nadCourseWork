@@ -21,58 +21,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
-   <!-- Sidebar -->
-<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-  <h3 class="w3-bar-item">System Administrator Activities</h3>
-  <a href="#" class="w3-bar-item w3-button">Register Patients</a>
-  <a href="#" class="w3-bar-item w3-button">Register Health Administrator</a>
-     <a href="#" class="w3-bar-item w3-button">Send Email</a>
-  
-  <a href="RegisterVaccineServlet" class="w3-bar-item w3-button">Register Vaccines</a>
-  <a href="#" class="w3-bar-item w3-button">Distribute Vaccines</a>
-     <a href="#" class="w3-bar-item w3-button">Generate Reports</a>
-       <a href="#" class="w3-bar-item w3-button">Generate Certificates</a>
-              <a href="#" class="w3-bar-item w3-button">Vaccine Status</a>
-     
-
-
-</div>
-
-<!-- Page Content -->
-<div style="margin-left:25%">
-    
-    
-
-<div class="w3-container w3-teal">
-    <style>
-        .header{
-            display: flex;
-            align-items: center;
-            justify-content: space-between
-        }
-        
-    </style>
-    <div class="header">
-        <h1>
-        <%   
-  String name = (String)session.getAttribute("name"); 
-
-out.print("Welcome "+name);  
-  
- 
-  
-
-  
-%>  
-    </h1>
-    
-    <h3>LogOut</h3>
-    
-        
-    </div>
-    
-</div>
+      <jsp:include page="includes/systemadmin.jsp" />
 
 <div class="w3-container">
             <div style="display: grid; place-items: center; margin:50px;  ;padding: 20px; border-radius: 10px;">
@@ -80,7 +29,7 @@ out.print("Welcome "+name);
            
         </div>
 
-        <form action="RegisterVaccineServlet" style="width: 40%; background-color: white;border: 1px solid whitesmoke; padding: 10px;box-shadow: 
+        <form action="AddVaccineToDb.jsp" style="width: 40%; background-color: white;border: 1px solid whitesmoke; padding: 10px;box-shadow: 
         rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; border-radius: 10px;">
             
             

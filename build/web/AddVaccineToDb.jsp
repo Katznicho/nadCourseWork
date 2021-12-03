@@ -17,10 +17,13 @@
                    <%@ taglib uri="/WEB-INF/tlds/VaccineOperationsTld" prefix="Vaccine" %>
                    
              
-           <% String type = request.getParameter("type"); %>
-           <% String totalNumber = request.getParameter("totalNumber"); %>
+           <% String type = request.getParameter("name"); %>
+           <% String totalNumber = request.getParameter("quantity"); %>
            
-                   <Vaccine:RegisterVaccineHandler table="vaccines" values="${type},${totalNumber}">
+           
+           
+           <Vaccine:RegisterVaccineHandler table="vaccines" 
+                     values="<%=type + ','+totalNumber %>">
                        
                    </Vaccine:RegisterVaccineHandler>
     </body>

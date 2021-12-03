@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/WEB-INF/tlds/GetCovidInfo.tld</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/administration/GetHealthAdministratorHandler.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/vaccine/RegisterVaccineServlet.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/RegisterHealthOfficerForm.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/administration/GetTotalDozesHandler.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/RegisterVaccineForm.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/health/HealthAdministrationModule.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/administration/GetCovidPatientsHandler.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/db/connection/DBConnection.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/login.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/RegisterAdministratorForm.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/includes/systemadmin.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/includes/healthadmin.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/AddAdministratorToDb.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/registerPatientForm.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/AddVaccineToDb.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/administration/GetBookingHandler.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/vaccine/VaccinationInventory.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/administration/HealthCentreHandler.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/RegisterHealthCenterForm.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/healthAdministrator.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/administration/LoginServlet.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/health/RegisterHealthCenterHandler.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/index.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/administration/GetVaccineTYypesHandler.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/administration/GetSystemAdminHandler.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/administration/VaccinationAdministrationModule.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/administration/SystemAdministrationModule.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/systemadminstrator.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/web/AddHealthCenterToDb.jsp</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/vaccine/RegisterVaccineHandler.java</file>
+            <file>file:/C:/Users/hp/Desktop/java/NadCourseWork/src/java/org/health/booking/Booking.java</file>
+        </group>
+    </open-files>
+</project-private>

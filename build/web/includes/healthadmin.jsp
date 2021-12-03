@@ -14,7 +14,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Dashboards Page</title>
     </head>
   <!-- Sidebar -->
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">

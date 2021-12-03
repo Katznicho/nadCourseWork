@@ -65,7 +65,7 @@
                   <button type="submit" class="btn btn-primary pt-3 m-2 btn-block">Register Health Center</button>
               </div>
             
-                        <!--<a href="healthadmin.jsp">Back</a>-->
+
     
         </form>
      </div>

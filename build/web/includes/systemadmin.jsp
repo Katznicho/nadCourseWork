@@ -14,14 +14,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Dashboard</title>
     </head>
   <!-- Sidebar -->
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
   <h3 class="w3-bar-item">System Administrator Activities</h3>
    <a href="systemadminstrator.jsp" class="w3-bar-item w3-button">Dashboard</a>
   <a href="#" class="w3-bar-item w3-button">Register Patients</a>
-  <a href="#" class="w3-bar-item w3-button">Register Health Administrator</a>
+  <a href="RegisterAdministratorForm.jsp" class="w3-bar-item w3-button">Register Health Administrator</a>
      <a href="#" class="w3-bar-item w3-button">Send Email</a>
   
   <a href="RegisterVaccineServlet" class="w3-bar-item w3-button">Register Vaccines</a>

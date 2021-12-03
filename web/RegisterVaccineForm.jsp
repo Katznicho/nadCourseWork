@@ -57,7 +57,7 @@
                   <button type="submit" class="btn btn-primary pt-3 m-2 btn-block">Register Vaccine</button>
               </div>
             
-                        <a href="SystemAdministratorServlet">Back</a>
+
     
         </form>
      </div>

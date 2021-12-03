@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>getcovidinfo</short-name>
+  <uri>/WEB-INF/tlds/GetCovidInfo</uri>
+  <!-- A validator verifies that the tags are used correctly at JSP
+          translation time. Validator entries look like this: 
+       <validator>
+           <validator-class>com.mycompany.TagLibValidator</validator-class>
+           <init-param>
+              <param-name>parameter</param-name>
+              <param-value>value</param-value>
+           </init-param>
+       </validator>
+    -->
+  <!-- A tag library can register Servlet Context event listeners in
+         case it needs to react to such events. Listener entries look
+         like this: 
+      <listener>
+          <listener-class>com.mycompany.TagLibListener</listener-class> 
+      </listener>
+    -->
+  <tag>
+    <name>GetCovidPatientsHandler</name>
+    <tag-class>org.health.administration.GetCovidPatientsHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>GetHealthAdministratorHandler</name>
+    <tag-class>org.health.administration.GetHealthAdministratorHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>GetSystemAdminHandler</name>
+    <tag-class>org.health.administration.GetSystemAdminHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>GetBookingHandler</name>
+    <tag-class>org.health.administration.GetBookingHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>HealthCentreHandler</name>
+    <tag-class>org.health.administration.HealthCentreHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>GetTotalDozesHandler</name>
+    <tag-class>org.health.administration.GetTotalDozesHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>GetVaccineTYypesHandler</name>
+    <tag-class>org.health.administration.GetVaccineTYypesHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+</taglib>

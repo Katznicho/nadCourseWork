@@ -97,7 +97,7 @@ public class LoginServlet extends HttpServlet {
                  }
                 }else{
                         session.setAttribute("invalid", "invalidCredentials");
-                 out.println("<script type='text/javascript'>window.location='index.jsp?invalid=true'</script>");
+                 out.println("<script type='text/javascript'>window.location='login.jsp?invalid=true'</script>");
 //               out.println("<h1>email :"+rs.getString("email")+"password"+rs.getString("password")+"</h1>");
                 }
                }

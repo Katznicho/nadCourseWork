@@ -1,91 +1,197 @@
-<%-- 
-    Document   : index.jsp
-    Created on : Nov 30, 2021, 6:36:03 AM
-    Author     : user
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-   
 <!DOCTYPE html>
+<html lang="en">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Covid 19 Tracker System</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login</title>
-    </head>
-    <style>
-        .myclass{
-            background: "red !important";
-            width: "50% ! important";
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Regna - v4.7.0
+  * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+          <h1 style="color:#fff;">Group Three</h1>
+
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="index.html">Regna</a></h1>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="login.jsp">Login</a></li>
+          <li><a class="nav-link scrollto" href="#services">Book</a></li>
           
-        }
-    </style>
-    <body style="background-image: url(https://blog.scopus.com/sites/default/files/coronavirus-image-iStock-628925532-full-width-wide_0.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100vh;">
-    <div style="display: grid; place-items: center; margin:50px;  ;padding: 20px; border-radius: 10px;">
-        <div  style="display: flex;align-items: center; justify-content: center; margin:10px;color: #fff; ">
-            <h1 style="align-items: center;">Welcome To the Covid Track Management System</h1>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Welcome to Covid 19 Tracker System</h1>
+
+      <a href="#about" class="btn-get-started">Book</a>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    
+   
+   
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action">
+      <div class="container">
+        <div class="row" data-aos="zoom-in">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3 class="cta-title">Call To Action</h3>
+            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div>
         </div>
 
-        <form action="LoginServlet" style="width: 40%; background-color: white;border: 1px solid whitesmoke; padding: 10px;box-shadow: 
-        rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; border-radius: 10px;">
-            
-            <a href="PatientAdmin">Patient Dashboard</a>
-<!--            <a href="SystemAdministratorServlet">System Administrator Servlet</a>
-             <a href="HealthAdministrator">Health Administrator Dashboard</a>-->
-            
-        <div style="display: flex;align-items: center; justify-content: center;">
-            <h5 style="align-items: center;">Login</h5>
-            <br/>
+      </div>
+    </section><!-- End Call To Action Section -->
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Team</h3>
+          <p class="section-description">
+              We are a team of talented young developers aimed at making covid tracking vert simple and easys
+          </p>
         </div>
-<div style="display: flex;align-items: center; justify-content: center;">
-                <%  
-                  boolean bool =  Boolean.parseBoolean(request.getParameter("invalid"));
-                  if(!bool){
-                      session.removeAttribute("invalid");
-                  }
-                  else{
-                        String invalid = (String)session.getAttribute("invalid"); 
-                       
+        <div class="row">
+            
+             <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="pic"><img src="assets/img/katende.jpeg" alt=""></div>
+              <h4>Katende Nicholas</h4>
+              <span>Worked on System Design and System Administration Module</span>
+              
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="pic"><img src="assets/img/miriam.jpeg" alt=""></div>
+              <h4>Miriam Tukasingura</h4>
+              <span>Worked on Booking Module Module</span>
+              
+            </div>
+          </div>
 
-                         out.print("<br/><small style='color:red'>Invalid Credentials</small>");  
-                  }
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="pic"><img src="assets/img/scentia.jpeg" alt=""></div>
+              <h4>Marie Crescentia Adeti</h4>
+              <span>Worked on Health Center Administration Module</span>
+              
+          </div>
 
-                    
-  
-%>  
-</div>
 
-            <div class="m-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" name="email">
+        </div>
+            
+            <div class="row">
+                 <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="pic"><img src="assets/img/daaki.jpeg" alt=""></div>
+              <h4>Daaki Benjamin</h4>
+              <span>Worked on Vaccination Inventory Module </span>
+              
+            </div>
+          </div>
+                <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="pic"><img src="assets/img/gabula.jpeg" alt=""></div>
+              <h4>Gabula Steven</h4>
+              <span>Worked on Vaccination Administration Module</span>
+              
+            </div>
+          </div>
             </div>
 
-              <div class="m-3">
-                <label for="exampleFormControlInput1" class="form-label">Password</label>
-                <input type="passsword" class="form-control m-2" name="password">
-              </div>
+      </div>
+    </section><!-- End Team Section -->
 
-              <div class="m-3 "  style="margin:20px 0;">
-                  <button type="submit" class="btn btn-primary pt-3 m-2 btn-block">Login</button>
-              </div>
-    
-        </form>
 
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
     </div>
-   
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Group Three</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+      -->
+
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 
-    
-
-    
 </html>

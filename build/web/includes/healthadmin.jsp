@@ -20,7 +20,7 @@
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
   <h3 class="w3-bar-item">Health Administrator Activities</h3>
     <a href="healthAdministrator.jsp" class="w3-bar-item w3-button">Dasboard</a>
-  <a href="#" class="w3-bar-item w3-button">Registers Health Centers</a>
+  <a href="RegisterHealthCenterForm.jsp" class="w3-bar-item w3-button">Registers Health Centers</a>
   <a href="#" class="w3-bar-item w3-button">User activities</a>
      <a href="#" class="w3-bar-item w3-button">Updates Health Center Information</a>
   

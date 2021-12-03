@@ -4,6 +4,12 @@
     Author     : user
 --%>
 
+<%-- 
+    Document   : RegisterVaccineForm
+    Created on : Dec 2, 2021, 1:08:27 PM
+    Author     : user
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,58 +27,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
-   <!-- Sidebar -->
-<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-  <h3 class="w3-bar-item">System Administrator Activities</h3>
-  <a href="#" class="w3-bar-item w3-button">Register Patients</a>
-  <a href="#" class="w3-bar-item w3-button">Register Health Administrator</a>
-     <a href="#" class="w3-bar-item w3-button">Send Email</a>
-  
-  <a href="RegisterVaccineServlet" class="w3-bar-item w3-button">Register Vaccines</a>
-  <a href="#" class="w3-bar-item w3-button">Distribute Vaccines</a>
-     <a href="#" class="w3-bar-item w3-button">Generate Reports</a>
-       <a href="#" class="w3-bar-item w3-button">Generate Certificates</a>
-              <a href="#" class="w3-bar-item w3-button">Vaccine Status</a>
-     
-
-
-</div>
-
-<!-- Page Content -->
-<div style="margin-left:25%">
-    
-    
-
-<div class="w3-container w3-teal">
-    <style>
-        .header{
-            display: flex;
-            align-items: center;
-            justify-content: space-between
-        }
-        
-    </style>
-    <div class="header">
-        <h1>
-        <%   
-  String name = (String)session.getAttribute("name"); 
-
-out.print("Welcome "+name);  
-  
- 
-  
-
-  
-%>  
-    </h1>
-    
-    <h3>LogOut</h3>
-    
-        
-    </div>
-    
-</div>
+      <jsp:include page="includes/healthadmin.jsp" />
 
 <div class="w3-container">
             <div style="display: grid; place-items: center; margin:50px;  ;padding: 20px; border-radius: 10px;">
@@ -80,23 +35,25 @@ out.print("Welcome "+name);
            
         </div>
 
-        <form action="RegisterVaccineServlet" style="width: 40%; background-color: white;border: 1px solid whitesmoke; padding: 10px;box-shadow: 
+        <form action="AddHealthCenterToDb.jsp" style="width: 40%; background-color: white;border: 1px solid whitesmoke; padding: 10px;box-shadow: 
         rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; border-radius: 10px;">
             
             
         <div style="display: flex;align-items: center; justify-content: center;">
-            <h5 style="align-items: center;">Register new vaccine</h5>
+            <h5 style="align-items: center;">Register Health Center</h5>
         </div>
 
             <div class="m-3">
-                <label for="exampleFormControlInput1" class="form-label">Vaccine Name</label>
-                <input type="name" class="form-control" name="name">
+                <label for="exampleFormControlInput1" class="form-label">Health Center Name:</label>
+                <input type="text" class="form-control" name="healthCenterName">
             </div>
 
               <div class="m-3">
-                <label for="exampleFormControlInput1" class="form-label">Quantity</label>
-                <input type="quantity" class="form-control m-2" name="quantity">
+                <label for="exampleFormControlInput1" class="form-label">No Of Patients:</label>
+                <input type="number" class="form-control m-2" name="totalPatients">
               </div>
+            
+             
             
                   <div class="m-3">
 
@@ -105,10 +62,10 @@ out.print("Welcome "+name);
             
 
               <div class="m-3 "  style="margin:20px 0;">
-                  <button type="submit" class="btn btn-primary pt-3 m-2 btn-block">Register Vaccine</button>
+                  <button type="submit" class="btn btn-primary pt-3 m-2 btn-block">Register Health Center</button>
               </div>
             
-                        <a href="SystemAdministratorServlet">Back</a>
+                        <!--<a href="healthadmin.jsp">Back</a>-->
     
         </form>
      </div>
@@ -118,3 +75,4 @@ out.print("Welcome "+name);
 
     </body>
 </html>
+

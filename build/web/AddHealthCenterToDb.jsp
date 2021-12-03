@@ -20,7 +20,7 @@
 out.println(patients);
            %>
            <registerhealthcentertld:RegisterHealthCenterHandler table="healthcentres"
-                                                                values="<%=name + ','+patients %>"></registerhealthcentertld:RegisterHealthCenterHandler>
+               values="<%= name + ','+patients %>"></registerhealthcentertld:RegisterHealthCenterHandler>
            
         
     </body>

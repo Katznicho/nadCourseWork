@@ -12,6 +12,11 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+   <%@taglib uri= "/WEB-INF/tlds/RegisterHealthCenterTld" prefix="registerhealthcentertld" %>%>
+        
+        <% String name = request.getParameter("healthCenterName"); %>
+           <% String patients = request.getParameter("totalPatients"); 
+out.println(patients);
+           %>
     </body>
 </html>

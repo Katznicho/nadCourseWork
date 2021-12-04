@@ -18,12 +18,14 @@
                    
              
            <% String type = request.getParameter("name"); %>
-           <% String totalNumber = request.getParameter("quantity"); %>
+           <% String totalNumber = request.getParameter("quantity"); 
+                      String batch = request.getParameter("batch");
+           %>
            
            
            
            <Vaccine:RegisterVaccineHandler table="vaccines" 
-                     values="<%=type + ','+totalNumber %>">
+                     values="<%=type + ','+totalNumber +','+batch %>">
                        
                    </Vaccine:RegisterVaccineHandler>
     </body>

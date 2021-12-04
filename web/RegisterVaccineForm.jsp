@@ -43,14 +43,15 @@
             </div>
 
               <div class="m-3">
-                <label for="exampleFormControlInput1" class="form-label">Quantity</label>
+                <label for="exampleFormControlInput1" class="form-label">Total Dozes</label>
                 <input type="quantity" class="form-control m-2" name="quantity">
               </div>
-            
-                  <div class="m-3">
-
-                      <input type="hidden" class="form-control m-2" name="redirect" value="true">
+             <div class="m-3">
+                <label for="exampleFormControlInput1" class="form-label">Batch Number</label>
+                <input type="quantity" class="form-control m-2" name="batch">
               </div>
+            
+                  
             
 
               <div class="m-3 "  style="margin:20px 0;">

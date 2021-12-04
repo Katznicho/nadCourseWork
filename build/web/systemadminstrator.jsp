@@ -21,7 +21,8 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-left: 100px;
+    margin-left: 150px;
+    
   }
   .mycard{
     box-shadow: rgba(6, 60, 114, 0.2) 0px 8px 24px;
@@ -30,7 +31,8 @@
     padding: 10px;
     margin:10px;
     background-color: #1c478e;
-    border-radius: 10px;;
+    border-radius: 10px;
+   cursor:pointer;
   }
   .newDiv{
     align-items: center;
@@ -40,6 +42,9 @@
   }
   .total{
     color: white;
+  }
+  .remove{
+      text-decoration: none;
   }
 
 </style>
@@ -63,9 +68,7 @@
            
                  <%@ taglib uri="/WEB-INF/tlds/GetCovidInfo" prefix="CovidInfo" %>
 
-                   <h1 style="margin-left: 200px; color:white; background-color: blue;">
-                                  
-                   </h1>
+                   
                    
                    <div class='containerCard'>
                        <div class="mycard">
@@ -150,7 +153,9 @@
              </h1>
              </div>
                        </div>
-                                                       <div class="mycard">
+                                    <a href="ShowVaccines.jsp" class="remove" 
+                                       style="text-decoration:none;">
+                                                                  <div class="mycard">
                             <div class='newDiv'>
              <h5 class='total'>Total Vaccine Types</h5>
              </div>
@@ -165,6 +170,9 @@
              </h1>
              </div>
                        </div>
+                                           
+                                    </a>
+                             
                                     
                                     
                                     
@@ -173,7 +181,11 @@
                                 <!<!-- comment -->
                                 
                                 <div class="containerCard">
-                                                       <div class="mycard">
+                                    <a href="ShowVaccines.jsp" class="remove" 
+                                       style="text-decoration:none;"
+                                       
+                                       >
+                                                                  <div class="mycard">
                             <div class='newDiv'>
              <h5 class='total'>Total Vaccine Dozens</h5>
              </div>
@@ -188,6 +200,9 @@
              </h1>
              </div>
                        </div>
+                                        
+                                    </a>
+                             
                                     
                                 </div>
                                 

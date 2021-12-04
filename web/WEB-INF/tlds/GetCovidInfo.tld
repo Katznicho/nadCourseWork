@@ -55,4 +55,9 @@
     <tag-class>org.health.administration.GetVaccineTYypesHandler</tag-class>
     <body-content>scriptless</body-content>
   </tag>
+  <tag>
+    <name>ShowVaccineHandler</name>
+    <tag-class>org.health.administration.ShowVaccineHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
 </taglib>

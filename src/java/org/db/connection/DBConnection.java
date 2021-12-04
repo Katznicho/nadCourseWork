@@ -18,7 +18,7 @@ public class DBConnection {
      private String password = "";
     private String user  ="root";
     private String jbcdriver = "com.mysql.jdbc.Driver";
-    private String jbcUrl = "jdbc:mysql://localhost:3306/nad";
+
     
 
     

@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/web/includes/systemadmin.jsp</file>
             <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/GetTotalDozesHandler.java</file>
@@ -22,5 +23,8 @@
             <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/db/connection/DBConnection.java</file>
             <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/GetBookingHandler.java</file>
         </group>
+=======
+        <group/>
+>>>>>>> 549af203ac0ca3e069eca87a28268fe59e693a9b
     </open-files>
 </project-private>

@@ -55,6 +55,7 @@ while(rs.next()){
 //out.println("<h1>Total Row :" +rs.getString("email")+"</h1>");
 Countrow++;
 }
+Conn.closeConnection();
            out.println(Countrow);
 
             JspFragment f = getJspBody();

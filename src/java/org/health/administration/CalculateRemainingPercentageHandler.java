@@ -20,8 +20,11 @@ import org.db.connection.DBConnection;
  *
  * @author user
  */
-public class GetVaccineTYypesHandler extends SimpleTagSupport {
-     DBConnection Conn = new DBConnection();
+public class CalculateRemainingPercentageHandler extends SimpleTagSupport {
+
+    private String totalPopulation;
+    //100,90
+    DBConnection Conn = new DBConnection();
          Connection newConn  = Conn.getConnection();
 
     /**
@@ -29,6 +32,8 @@ public class GetVaccineTYypesHandler extends SimpleTagSupport {
      * method is provided by the tag library developer, and handles all tag
      * processing, body iteration, etc.
      */
+
+       
     @Override
     public void doTag() throws JspException {
         JspWriter out = getJspContext().getOut();
@@ -39,17 +44,30 @@ public class GetVaccineTYypesHandler extends SimpleTagSupport {
             //
             // out.println("<strong>" + attribute_1 + "</strong>");
             // out.println("    <blockquote>");
-                 Statement St = newConn.createStatement();
-                           int bookings = 0;
-                  ResultSet booking  = St.executeQuery("select dIstinct type from vaccines ");
+                     String[] newValues = totalPopulation.split(",");
+                     //out.println("The values are "+totalPopulation);
+                     
+            Statement St = newConn.createStatement();
+             ResultSet rs =St.executeQuery("select * from patients ");
 
-    while(booking.next()){
 
-      bookings++;
 
+//int totalAdmin = 0;
+//administrator
+ int Countrow= 0;
+ 
+
+//rs.length
+while(rs.next()){
+//Countrow = rs.getString("healthCenterName");
+//out.println("<h1>Total Row :" +rs.getString("email")+"</h1>");
+Countrow++;
 }
- out.println(bookings);
- Conn.closeConnection();
+ int totalPercentage =  (Countrow/ Integer.parseInt(newValues[0]))*100;
+ int remaining = Integer.parseInt(newValues[1]) -totalPercentage;
+           out.println(remaining +"%");
+Conn.closeConnection();
+
             JspFragment f = getJspBody();
             if (f != null) {
                 f.invoke(out);
@@ -60,10 +78,14 @@ public class GetVaccineTYypesHandler extends SimpleTagSupport {
             //
             // out.println("    </blockquote>");
         } catch (java.io.IOException ex) {
-            throw new JspException("Error in GetVaccineTYypesHandler tag", ex);
+            throw new JspException("Error in CalculateRemainingPercentageHandler tag", ex);
         } catch (SQLException ex) {
-             Logger.getLogger(GetVaccineTYypesHandler.class.getName()).log(Level.SEVERE, null, ex);
-         }
+            Logger.getLogger(CalculateRemainingPercentageHandler.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void setTotalPopulation(String totalPopulation) {
+        this.totalPopulation = totalPopulation;
     }
     
 }

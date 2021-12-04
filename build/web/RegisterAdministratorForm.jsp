@@ -27,20 +27,7 @@
     <body>
       <jsp:include page="includes/systemadmin.jsp" />
       
-      <%
-              DBConnection Conn = new DBConnection();
-         Connection newConn  = Conn.getConnection();
-         Statement St = newConn.createStatement();
-      %>
-      <%
-          String []healthCentres;
-          ResultSet centres  =St.executeQuery("select * from healthcentres ");
-          while(centres.next()){
-              //healthCentres [centres.getString("healthCenterName")];
-                     
-          }
-          
-      %>
+      
 
 <div class="w3-container">
             <div style="display: grid; place-items: center; margin:50px;  ;padding: 20px; border-radius: 10px;">

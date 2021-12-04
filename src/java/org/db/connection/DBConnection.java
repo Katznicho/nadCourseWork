@@ -47,6 +47,10 @@ public class DBConnection {
         return connection;
         
     }
+    
+    public void closeConnection() throws SQLException{
+         this.getConnection().close();
+    }
 
     
     

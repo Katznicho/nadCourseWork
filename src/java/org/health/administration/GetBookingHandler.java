@@ -48,6 +48,7 @@ public class GetBookingHandler extends SimpleTagSupport {
 
 }
  out.println(bookings);
+  Conn.closeConnection();
             JspFragment f = getJspBody();
             if (f != null) {
                 f.invoke(out);

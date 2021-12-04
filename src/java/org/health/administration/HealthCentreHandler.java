@@ -49,6 +49,7 @@ public class HealthCentreHandler extends SimpleTagSupport {
 
 }
  out.println(bookings);
+ Conn.closeConnection();
 
             JspFragment f = getJspBody();
             if (f != null) {

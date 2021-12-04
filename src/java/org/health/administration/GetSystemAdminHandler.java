@@ -47,6 +47,7 @@ public class GetSystemAdminHandler extends SimpleTagSupport {
 //        if(admin.getString("Admin").equals("Admin")){
             totalSystemAdmins++;
        }
+                   Conn.closeConnection();
           
                    out.println(totalSystemAdmins);
                    

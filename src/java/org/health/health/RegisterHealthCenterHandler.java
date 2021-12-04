@@ -60,6 +60,7 @@ public class RegisterHealthCenterHandler extends SimpleTagSupport {
       
                  
              }
+                     Conn.closeConnection();
 
             
 

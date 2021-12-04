@@ -20,8 +20,10 @@ import org.db.connection.DBConnection;
  *
  * @author user
  */
-public class GetVaccineTYypesHandler extends SimpleTagSupport {
-     DBConnection Conn = new DBConnection();
+public class CalculatePercentageVaccinatedHandler extends SimpleTagSupport {
+
+    private String totalPopulation;
+    DBConnection Conn = new DBConnection();
          Connection newConn  = Conn.getConnection();
 
     /**
@@ -39,17 +41,27 @@ public class GetVaccineTYypesHandler extends SimpleTagSupport {
             //
             // out.println("<strong>" + attribute_1 + "</strong>");
             // out.println("    <blockquote>");
-                 Statement St = newConn.createStatement();
-                           int bookings = 0;
-                  ResultSet booking  = St.executeQuery("select dIstinct type from vaccines ");
+             Statement St = newConn.createStatement();
+             ResultSet rs =St.executeQuery("select * from patients ");
 
-    while(booking.next()){
 
-      bookings++;
 
+//int totalAdmin = 0;
+//administrator
+ int Countrow= 0;
+ 
+
+//rs.length
+while(rs.next()){
+//Countrow = rs.getString("healthCenterName");
+//out.println("<h1>Total Row :" +rs.getString("email")+"</h1>");
+Countrow++;
 }
- out.println(bookings);
- Conn.closeConnection();
+ int totalPercentage =  (Countrow/ Integer.parseInt(totalPopulation))*100;
+           out.println(totalPercentage +"%");
+Conn.closeConnection();
+
+
             JspFragment f = getJspBody();
             if (f != null) {
                 f.invoke(out);
@@ -60,10 +72,14 @@ public class GetVaccineTYypesHandler extends SimpleTagSupport {
             //
             // out.println("    </blockquote>");
         } catch (java.io.IOException ex) {
-            throw new JspException("Error in GetVaccineTYypesHandler tag", ex);
+            throw new JspException("Error in CalculatePercentageVaccinatedHandler tag", ex);
         } catch (SQLException ex) {
-             Logger.getLogger(GetVaccineTYypesHandler.class.getName()).log(Level.SEVERE, null, ex);
-         }
+            Logger.getLogger(CalculatePercentageVaccinatedHandler.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void setTotalPopulation(String totalPopulation) {
+        this.totalPopulation = totalPopulation;
     }
     
 }

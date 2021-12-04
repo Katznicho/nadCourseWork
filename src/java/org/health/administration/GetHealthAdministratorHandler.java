@@ -43,6 +43,7 @@ public class GetHealthAdministratorHandler extends SimpleTagSupport {
       //  }
 
 }
+    Conn.closeConnection();
                out.println(totalAdmin);
             // TODO: insert code to write html before writing the body content.
             // e.g.:

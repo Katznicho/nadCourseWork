@@ -101,6 +101,7 @@ public class LoginServlet extends HttpServlet {
 //               out.println("<h1>email :"+rs.getString("email")+"password"+rs.getString("password")+"</h1>");
                 }
                }
+               Conn.closeConnection();
               // newConn.close();
             out.println("</body>");
             out.println("</html>");

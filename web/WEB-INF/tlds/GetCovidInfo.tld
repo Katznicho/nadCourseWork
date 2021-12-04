@@ -60,4 +60,25 @@
     <tag-class>org.health.administration.ShowVaccineHandler</tag-class>
     <body-content>scriptless</body-content>
   </tag>
+  <tag>
+    <name>CalculateRemainingPercentageHandler</name>
+    <tag-class>org.health.administration.CalculateRemainingPercentageHandler</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>totalPopulation</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
+  <tag>
+    <name>CalculatePercentageVaccinatedHandler</name>
+    <tag-class>org.health.administration.CalculatePercentageVaccinatedHandler</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>totalPopulation</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
 </taglib>

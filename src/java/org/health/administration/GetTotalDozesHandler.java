@@ -52,6 +52,7 @@ public class GetTotalDozesHandler extends SimpleTagSupport {
 
 }
  out.println(vaccineDozes);
+ Conn.closeConnection();
 
             JspFragment f = getJspBody();
             if (f != null) {

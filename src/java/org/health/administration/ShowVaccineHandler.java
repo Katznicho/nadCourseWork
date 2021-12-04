@@ -42,17 +42,6 @@ public class ShowVaccineHandler extends SimpleTagSupport {
                        Statement St = newConn.createStatement();
                            
                   ResultSet vaccineType  = St.executeQuery("select * from vaccines ");
-//       out.println("   <table class=\"table\">\n" +
-//"  <thead class=\"thead-dark\">\n" +
-//"    <tr>\n" +
-//"      <th scope=\"col\">Vaccine id</th>\n" +
-//"      <th scope=\"col\">Vaccine Name</th>\n" +
-//"      <th scope=\"col\">Total Number</th>\n" +
-//"      <th scope=\"col\">Batch Number</th>\n" +
-//"      <th>Status</th>\n" +
-//"      <th>Distribute</th>\n" +
-//"    </tr>\n" +
-//"  </thead>\n" );
     while(vaccineType.next()){
 
     out.println("  <tr>\n" +
@@ -63,12 +52,9 @@ public class ShowVaccineHandler extends SimpleTagSupport {
             "<td><button>Distribute</button> </td>\n" +
 "    </tr>");
 
-//out.println("</table>");
-
-
-
-
 }
+    
+    Conn.closeConnection();
 
 
             JspFragment f = getJspBody();

@@ -28,7 +28,7 @@
   <a href="ShowVaccines.jsp" class="w3-bar-item w3-button">Distribute Vaccines</a>
      <a href="#" class="w3-bar-item w3-button">Generate Reports</a>
        <a href="#" class="w3-bar-item w3-button">Generate Certificates</a>
-              <a href="#" class="w3-bar-item w3-button">Vaccine Status</a>
+              <a href="ShowVaccines.jsp" class="w3-bar-item w3-button">Vaccine Status</a>
   
      
 

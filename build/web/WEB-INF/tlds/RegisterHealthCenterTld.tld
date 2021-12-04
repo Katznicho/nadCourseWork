@@ -35,4 +35,21 @@
       <type>java.lang.String</type>
     </attribute>
   </tag>
+  <tag>
+    <name>AddHealthAdminToDb</name>
+    <tag-class>org.health.administration.AddHealthAdminToDb</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>table</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>values</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
 </taglib>

@@ -27,7 +27,7 @@
     <body>
       <jsp:include page="includes/systemadmin.jsp" />
       
-      
+      <%@taglib  uri="/WEB-INF/tlds/GetHealthCenterTld"  prefix="Admins" %> %>>
 
 <div class="w3-container">
             <div style="display: grid; place-items: center; margin:50px;  ;padding: 20px; border-radius: 10px;">
@@ -35,7 +35,7 @@
            
         </div>
 
-        <form action="AddVaccineToDb.jsp" style="width: 40%; background-color: white;border: 1px solid whitesmoke; padding: 10px;box-shadow: 
+        <form action="AddAdministratorToDb.jsp" style="width: 40%; background-color: white;border: 1px solid whitesmoke; padding: 10px;box-shadow: 
         rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; border-radius: 10px;">
             
             
@@ -45,7 +45,7 @@
 
             <div class="m-3">
                 <label for="exampleFormControlInput1" class="form-label"> Name</label>
-                <input type="name" class="form-control" name="name" required>
+                <input type="text" class="form-control" name="myname" required>
             </div>
 
               <div class="m-3">
@@ -53,21 +53,22 @@
                 <input type="email" required  class="form-control m-2" name="email">
               </div>
                           <div class="m-3">
-                <label for="exampleFormControlInput1" class="form-label">Health centres</label>
+                <label for="exampleFormControlInput1" class="form-label">Health center</label>
                   
                 <select required  class="form-control m-2" name="centre">
-                    <option selected="" disabled>choose centre</option>
+                    <option selected="" disabled>choose health center</option>
+                    <Admins:GetHealthcCenterHandler/>
                 </select>
               </div>
             
               <div class="m-3">
                 <label for="exampleFormControlInput1" class="form-label">Password</label>
-                <input type="password" required  class="form-control m-2" name="passsword">
+                <input type="password" required  class="form-control m-2" name="password">
               </div>
             
                     <div class="m-3">
                 <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
-                <input type="password" required  class="form-control m-2" name="confirmPassword">
+                <input type="password" required  class="form-control m-2" name="confirmpassword">
               </div>
             
                   

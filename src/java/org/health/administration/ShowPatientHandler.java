@@ -20,7 +20,7 @@ import org.db.connection.DBConnection;
  *
  * @author user
  */
-public class ShowVaccineHandler extends SimpleTagSupport {
+public class ShowPatientHandler extends SimpleTagSupport {
     DBConnection Conn = new DBConnection();
          Connection newConn  = Conn.getConnection();
 
@@ -39,19 +39,19 @@ public class ShowVaccineHandler extends SimpleTagSupport {
             //
             // out.println("<strong>" + attribute_1 + "</strong>");
             // out.println("    <blockquote>");
-                       Statement St = newConn.createStatement();
+                Statement St = newConn.createStatement();
                            
-                  ResultSet vaccineType  = St.executeQuery("select * from vaccines ");
+                  ResultSet vaccineType  = St.executeQuery("select * from patients ");
     while(vaccineType.next()){
 
     out.println("  <tr>\n" +
-"      <th scope=\"row\">"+vaccineType.getString("batchNumber")+"</th>\n" +
-"      <td>"+vaccineType.getString("type")+"</td>\n" +
-"      <td>"+vaccineType.getString("totalNumber")+"</td>\n" +
-"      <td style='display:flex;align-items:center;justify-content:center;margin-left:-30px;'> "
-        + "<p style='color:white;border-radius:5px; padding:5px;align-items:center; background-color:green'>"
-        + ""+vaccineType.getString("status")+"</p></td>\n" +
-            "<td><button onClick='alert(\"am clicked\")'> </td>\n" +
+"      <th scope=\"row\">"+vaccineType.getString("patientsId")+"</th>\n" +
+        "      <th scope=\"row\">"+vaccineType.getString("patientName")+"</th>\n" +
+"      <td>"+vaccineType.getString("healthCenterName")+"</td>\n" +
+"      <td>"+vaccineType.getString("batchNumber")+"</td>\n" +
+"      <td> "
+        + ""+vaccineType.getString("NIN")+"</td>\n" +
+            "<td><button onClick='window.location=\"PrintCertificate.jsp?name="+vaccineType.getString("patientName")+"\"'>view certificate</button></td>\n" +
 "    </tr>");
 
 }
@@ -69,11 +69,10 @@ public class ShowVaccineHandler extends SimpleTagSupport {
             //
             // out.println("    </blockquote>");
         } catch (java.io.IOException ex) {
-            throw new JspException("Error in ShowVaccineHandler tag", ex);
+            throw new JspException("Error in ShowPatientHandler tag", ex);
         } catch (SQLException ex) {
-            Logger.getLogger(ShowVaccineHandler.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ShowPatientHandler.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
 }
-

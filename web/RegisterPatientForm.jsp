@@ -21,58 +21,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
-   <!-- Sidebar -->
-<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-  <h3 class="w3-bar-item">System Administrator Activities</h3>
-  <a href="#" class="w3-bar-item w3-button">Register Patients</a>
-  <a href="#" class="w3-bar-item w3-button">Register Health Administrator</a>
-     <a href="#" class="w3-bar-item w3-button">Send Email</a>
-  
-  <a href="RegisterVaccineServlet" class="w3-bar-item w3-button">Register Vaccines</a>
-  <a href="#" class="w3-bar-item w3-button">Distribute Vaccines</a>
-     <a href="#" class="w3-bar-item w3-button">Generate Reports</a>
-       <a href="#" class="w3-bar-item w3-button">Generate Certificates</a>
-              <a href="#" class="w3-bar-item w3-button">Vaccine Status</a>
-     
-
-
-</div>
-
-<!-- Page Content -->
-<div style="margin-left:25%">
-    
-    
-
-<div class="w3-container w3-teal">
-    <style>
-        .header{
-            display: flex;
-            align-items: center;
-            justify-content: space-between
-        }
-        
-    </style>
-    <div class="header">
-        <h1>
-        <%   
-  String name = (String)session.getAttribute("name"); 
-
-out.print("Welcome "+name);  
-  
- 
-  
-
-  
-%>  
-    </h1>
-    
-    <h3>LogOut</h3>
-    
-        
-    </div>
-    
-</div>
+      <jsp:include page="includes/systemadmin.jsp" />
+            <%@taglib  uri="/WEB-INF/tlds/GetHealthCenterTld"  prefix="Admins" %> %>
+            <%@taglib  uri="/WEB-INF/tlds/VaccineOperationsTld"  prefix="vaccine"%>
+          
 
 <div class="w3-container">
             <div style="display: grid; place-items: center; margin:50px;  ;padding: 20px; border-radius: 10px;">
@@ -85,23 +37,45 @@ out.print("Welcome "+name);
             
             
         <div style="display: flex;align-items: center; justify-content: center;">
-            <h5 style="align-items: center;">Register new vaccine</h5>
+            <h5 style="align-items: center;">Register Vaccinated Patient</h5>
         </div>
 
             <div class="m-3">
-                <label for="exampleFormControlInput1" class="form-label">Vaccine Name</label>
+                <label for="exampleFormControlInput1" class="form-label">Patient Name</label>
                 <input type="name" class="form-control" name="name">
             </div>
 
               <div class="m-3">
-                <label for="exampleFormControlInput1" class="form-label">Quantity</label>
-                <input type="quantity" class="form-control m-2" name="quantity">
+                <label for="exampleFormControlInput1" class="form-label">NIN</label>
+                <input type="text" class="form-control m-2" name="nin">
               </div>
             
-                  <div class="m-3">
+                 <div class="m-3">
+                         <label for="exampleFormControlInput1" class="form-label">Health Center </label>
+                  <select required  class="form-control m-2" name="centre">
+                    <option selected="" disabled>choose health center</option>
+                    <Admins:GetHealthcCenterHandler/>
+                </select>
+            </div>
+                o
+                          <div class="m-3">
+                         <label for="exampleFormControlInput1" class="form-label">Vaccine Name </label>
+                  <select required  class="form-control m-2" name="vaccineName">
+                    <option selected="" disabled>choose Vaccine</option>
+                    <vaccine:SelectVaccinesTag />
+                </select>
+            </div>
+                
 
-                      <input type="hidden" class="form-control m-2" name="redirect" value="true">
-              </div>
+          <div class="m-3">
+                         <label for="exampleFormControlInput1" class="form-label">Batch Number </label>
+                  <select required  class="form-control m-2" name="batchNumber">
+                    <option selected="" disabled>choose batch number</option>
+                    <vaccine:SelectBatchNoTag />
+                </select>
+            </div>
+            
+                  
             
 
               <div class="m-3 "  style="margin:20px 0;">

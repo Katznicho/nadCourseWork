@@ -5,9 +5,9 @@
 package org.health.administration;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.jsp.JspWriter;
@@ -20,8 +20,8 @@ import org.db.connection.DBConnection;
  *
  * @author user
  */
-public class ShowVaccineHandler extends SimpleTagSupport {
-    DBConnection Conn = new DBConnection();
+public class GetHealthcCenterHandler extends SimpleTagSupport {
+     DBConnection Conn = new DBConnection();
          Connection newConn  = Conn.getConnection();
 
     /**
@@ -39,24 +39,20 @@ public class ShowVaccineHandler extends SimpleTagSupport {
             //
             // out.println("<strong>" + attribute_1 + "</strong>");
             // out.println("    <blockquote>");
-                       Statement St = newConn.createStatement();
-                           
-                  ResultSet vaccineType  = St.executeQuery("select * from vaccines ");
-    while(vaccineType.next()){
+             String query = "SELECT * FROM `healthcentres`";
 
-    out.println("  <tr>\n" +
-"      <th scope=\"row\">"+vaccineType.getString("batchNumber")+"</th>\n" +
-"      <td>"+vaccineType.getString("type")+"</td>\n" +
-"      <td>"+vaccineType.getString("totalNumber")+"</td>\n" +
-"      <td style='display:flex;align-items:center;justify-content:center;margin-left:-30px;'> "
-        + "<p style='color:white;border-radius:5px; padding:5px;align-items:center; background-color:green'>"
-        + ""+vaccineType.getString("status")+"</p></td>\n" +
-            "<td><button onClick='alert(\"am clicked\")'> </td>\n" +
-"    </tr>");
+             PreparedStatement preparedStatement = newConn.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
 
-}
-    
-    Conn.closeConnection();
+           
+
+            while (resultSet.next()) {
+                out.println("<option ");
+                out.println("value = \"" + resultSet.getString("healthCenterName") + "\">");
+                out.println( resultSet.getString("healthCenterName"));
+                out.println("</option>");
+
+            }
 
 
             JspFragment f = getJspBody();
@@ -69,11 +65,10 @@ public class ShowVaccineHandler extends SimpleTagSupport {
             //
             // out.println("    </blockquote>");
         } catch (java.io.IOException ex) {
-            throw new JspException("Error in ShowVaccineHandler tag", ex);
+            throw new JspException("Error in GetHealthcCenterHandler tag", ex);
         } catch (SQLException ex) {
-            Logger.getLogger(ShowVaccineHandler.class.getName()).log(Level.SEVERE, null, ex);
-        }
+             Logger.getLogger(GetHealthcCenterHandler.class.getName()).log(Level.SEVERE, null, ex);
+         }
     }
     
 }
-

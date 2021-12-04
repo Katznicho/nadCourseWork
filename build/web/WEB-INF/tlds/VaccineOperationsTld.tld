@@ -41,5 +41,14 @@
       <type>java.lang.String</type>
     </attribute>
   </tag>
- 
+  <tag>
+    <name>SelectVaccinesTag</name>
+    <tag-class>org.health.administration.SelectVaccinesTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>SelectBatchNoTag</name>
+    <tag-class>org.health.vaccine.SelectBatchNoTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
 </taglib>

@@ -87,6 +87,7 @@
                  <%@ taglib uri="/WEB-INF/tlds/GetCovidInfo" prefix="CovidInfo" %>
                  
                  <div class="containerCard">
+                     
                       <div class="mycard1">
            <div class="newDiv1">
                    <h4 class="total">Total Population</h4>
@@ -134,7 +135,8 @@
                    
                    <div class='containerCard'>
                        <div class="mycard">
-                            <div class='newDiv'>
+                           <a href="ShowPatients.jsp">
+                                <div class='newDiv'>
              <h5 class='total'>Total Patients</h5>
              </div>
                             <div class='newDiv'>
@@ -148,11 +150,15 @@
              
              </h1>
              </div>
-                       </div><!-- comment -->
+                       </div>
+                               
+                           </a>
+                            
+                                      <!-- comment -->
                        
                        <div class="mycard">
                             <div class='newDiv'>
-             <h5 class='total'>System Administrators</h5>
+             <h5 class='total'>Health Administrators</h5>
              </div>
                             <div class='newDiv'>
                                 <h1 class="total">

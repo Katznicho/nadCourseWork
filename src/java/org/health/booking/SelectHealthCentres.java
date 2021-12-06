@@ -65,7 +65,8 @@ public class SelectHealthCentres extends SimpleTagSupport {
                     message = rs.getString("totalBookings") + " Bookings";
                 }
                 //Vaccines available at the hospital
-                String selectVaccines = "SELECT vaccines.type as type FROM `healthcentrevaccines` INNER JOIN vaccines ON healthcentrevaccines.batchNo = vaccines.batchNumber WHERE healthCenterId= '" + resultSet.getString("healthCenterId") + "'";
+                String selectVaccines = "SELECT vaccines.type as type FROM `healthcentrevaccines` INNER JOIN vaccines ON "
+                        + "healthcentrevaccines.batchNo = vaccines.batchNumber WHERE healthCenterId= '" + resultSet.getString("healthCenterId") + "'";
 
                 PreparedStatement pSt = newConn.prepareStatement(selectVaccines);
                 ResultSet result = pSt.executeQuery();

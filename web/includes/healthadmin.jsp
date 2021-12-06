@@ -25,14 +25,13 @@
   <!-- Sidebar -->
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
     <h3 class="w3-bar-item"><%= healthCentreName %></h3>
-    <a href="healthAdministrator.jsp" class="w3-bar-item w3-button">Dasboard</a>
+    <a href="healthAdministrator.jsp" class="w3-bar-item w3-button">Dashboard</a>
+    
       <a href="RegisterPatientForm.jsp" class="w3-bar-item w3-button">Register Patients</a>
 
   
-  <a href="#" class="w3-bar-item w3-button">User activities</a>
-     <a href="ShowHealthCenter.jsp" class="w3-bar-item w3-button">Updates Health Center Information</a>
-  
-  <a href="#" class="w3-bar-item w3-button">Provides necessary Reports</a>
+  <a href="#" class="w3-bar-item w3-button">User activities</a>  
+  <a href="ShowHealthReports.jsp" class="w3-bar-item w3-button">Provides necessary Reports</a>
   
      
 

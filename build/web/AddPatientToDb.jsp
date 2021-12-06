@@ -18,12 +18,14 @@
         <% String patientName = request.getParameter("name"); %>
         <% String NIN = request.getParameter("nin"); %>
         <% String healthCentreId = request.getParameter("healthCentreId");%>
+         <%   String healthCentreName = (String) request.getSession().getAttribute("healthCentreName");;%>
         <% String batchNumber = request.getParameter("batchNumber");%>
         <% String days = request.getParameter("days");%>
         <%=patientName + ',' + NIN + ',' + batchNumber + ',' + healthCentreId%>
         
         
-        <patient:RegisterPatientsHandler  tables="patients" values="<%=patientName + ',' + NIN +','+healthCentreId + ','+ batchNumber+','+days  %>" />
+        <patient:RegisterPatientsHandler  tables="patients"
+        values="<%=patientName + ',' + NIN +','+healthCentreId + ','+ batchNumber+','+days+ ','+healthCentreName   %>" />
 
         <%--<registerpatient:RegisterPatientsHandler table="patients" values="<%=patientName %>"></registerpatient:RegisterPatientsHandler>--%>
 

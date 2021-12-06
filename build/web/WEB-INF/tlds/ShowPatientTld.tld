@@ -30,4 +30,21 @@
     <tag-class>org.health.health.ShowHealthCenterHandler</tag-class>
     <body-content>scriptless</body-content>
   </tag>
+  <tag>
+    <name>ShowHealthReportsHandler</name>
+    <tag-class>org.health.administration.ShowHealthReportsHandler</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>table</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>values</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
 </taglib>

@@ -50,7 +50,8 @@
             </div>
                 <div style="display:grid;place-items:center">
                     <br><br>
-                    <span style="font-size:25px"><i>This is to certify that <%=id%> was vaccinated against covid 19 as shown below</i></span>
+                    <span style="font-size:25px"><i>This is to certify that <b style="color:blue" > <%=id%> </b> was vaccinated against
+                            covid 19 as shown below</i></span>
                     <br><br>
                 </div>
             <Print:printCertificate table="patients" values="<%= id%>"></Print:printCertificate>

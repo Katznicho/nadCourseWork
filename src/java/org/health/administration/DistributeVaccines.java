@@ -71,18 +71,20 @@ public class DistributeVaccines extends HttpServlet {
             for (i = 0; i < 5; i++) {
                 float dose = (float) totalPatientsHospital[i] / totalPatients * totalDoses;
                 Statement st = newConn.createStatement();
-                out.println("Total Patients " + totalPatientsHospital[i]);
+                //out.println("Total Patients " + totalPatientsHospital[i]);
                 int dosage = (int) dose;
                 st.execute("INSERT INTO `healthcentrevaccines` "
                         + "SET `healthCenterId`= '" + hospitalIds[i] + "', `batchNo`= '" + batchNo + "', "
                         + "`totalDoses`= '" + dosage + "', `remainingDoses`= '" + dosage + "'");
-                out.println(dose);
+                //out.println(dose);
 
             }
             Statement st1 = newConn.createStatement();
             st1.execute("UPDATE `vaccines` SET `status`='Done' WHERE batchNumber = '"+batchNo+"'");
+            
+                  out.println("<script type='text/javascript'>window.location='systemadminstrator.jsp'</script>");
 
-            out.println("<h1>Servlet DistributeVaccines at " + request.getContextPath() + "</h1>");
+
             out.println("</body>");
             out.println("</html>");
         }

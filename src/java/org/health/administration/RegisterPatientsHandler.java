@@ -50,7 +50,8 @@ public class RegisterPatientsHandler extends SimpleTagSupport {
 
             String[] newValues = values.split(",");
             String healthCentreName = "";
-            String name = newValues[0];
+            String center = newValues[5];
+            String name = newValues[0];s
             String nin = newValues[1];
 
             String healthCentreId = newValues[2];
@@ -70,6 +71,7 @@ public class RegisterPatientsHandler extends SimpleTagSupport {
                     healthCentreName = rs.getString("HealthCenterName");
                 }
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                
 	
                 int days = Integer.parseInt(newValues[5]);
                 Calendar c = Calendar.getInstance();
@@ -78,7 +80,7 @@ public class RegisterPatientsHandler extends SimpleTagSupport {
                 String newDate = sdf.format(c.getTime()); 
                 out.println("This is it "+days+"Next jab on "+newDate);
 
-                St.execute("INSERT INTO `patients` SET `healthCenterName`='" + healthCentreName + "', `NIN`= '" + nin + "',`typeOfVaccine`='" + vaccineType + "' ,`batchNumber`='" + batchNo + "',`patientName`='" + name + "', `returnDate`= '"+newDate+"'");
+                St.execute("INSERT INTO `patients` SET `healthCenterName`='" + center + "', `NIN`= '" + nin + "',`typeOfVaccine`='" + vaccineType + "' ,`batchNumber`='" + batchNo + "',`patientName`='" + name + "', `returnDate`= '"+newDate+"'");
 
                 //Reduce the vaccine doses by 1
                 out.println("<script type='text/javascript'>alert('" + newValues[0] + " added successfully');</script>");

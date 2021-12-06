@@ -16,19 +16,22 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Dashboard</title>
     </head>
+    <%  String name = (String)session.getAttribute("name"); %>
   <!-- Sidebar -->
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-  <h3 class="w3-bar-item">System Administrator Activities</h3>
+  <h3 class="w3-bar-item"><%=name %></h3>
    <a href="systemadminstrator.jsp" class="w3-bar-item w3-button">Dashboard</a>
 
   <a href="RegisterAdministratorForm.jsp" class="w3-bar-item w3-button">Register Health Administrator</a>
+  
+       <a href="ShowHealthCenter.jsp" class="w3-bar-item w3-button">Updates Health Center Information</a>
     <a href="RegisterHealthCenterForm.jsp" class="w3-bar-item w3-button">Registers Health Centers</a>
      <a href="#" class="w3-bar-item w3-button">Send Email</a>
   
   <a href="RegisterVaccineServlet" class="w3-bar-item w3-button">Register Vaccines</a>
   <a href="ShowVaccines.jsp" class="w3-bar-item w3-button">Distribute Vaccines</a>
-     <a href="#" class="w3-bar-item w3-button">Generate Reports</a>
-       <a href="#" class="w3-bar-item w3-button">Generate Certificates</a>
+     <a href="ShowPatients.jsp" class="w3-bar-item w3-button">Generate Reports</a>
+       <a href="ShowPatients.jsps" class="w3-bar-item w3-button">Generate Certificates</a>
               <a href="ShowVaccines.jsp" class="w3-bar-item w3-button">Vaccine Status</a>
   
      
@@ -51,7 +54,7 @@
   <div class="header">
         <h1>
         <%   
-  String name = (String)session.getAttribute("name"); 
+
 
 out.print("Welcome "+name);  
   

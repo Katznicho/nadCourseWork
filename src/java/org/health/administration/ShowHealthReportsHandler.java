@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/TagHandler.java to edit this template
  */
-package org.health.vaccine;
+package org.health.administration;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
@@ -19,10 +20,11 @@ import org.db.connection.DBConnection;
  *
  * @author user
  */
-public class RegisterVaccineHandler extends SimpleTagSupport {
-               DBConnection Conn = new DBConnection();
-         Connection newConn  = Conn.getConnection();
+public class ShowHealthReportsHandler extends SimpleTagSupport {
 
+    DBConnection Conn = new DBConnection();
+         Connection newConn  = Conn.getConnection();
+    
     private String table;
     private String values;
 
@@ -41,18 +43,26 @@ public class RegisterVaccineHandler extends SimpleTagSupport {
             //
             // out.println("<strong>" + attribute_1 + "</strong>");
             // out.println("    <blockquote>");
-            //out.println("The values are "+values);
-                       String[] newValues = values.split(",");
-                         //int quantity =   Integer.parseInt(newValues[1]);
-                     Statement St = newConn.createStatement();
-                    // out.println("Am here man" +newValues[1]+ "another"+newValues[0]+ "The table is" +table);
-                     if(newValues.length > 1){
-          St.execute("INSERT INTO `vaccines` (`vaccineId`, `totalNumber`, `type`, `status`,`batchNumber`) "
-                  + "VALUES (NULL, '"+newValues[1]+"', '"+newValues[0]+"', 'available', '"+newValues[2]+"');");
-                       out.println("<script type='text/javascript'>alert('"+newValues[0]+" added successfully');</script>");
-                 out.println("<script type='text/javascript'>window.location='systemadminstrator.jsp'</script>");
-      
-             }
+            
+            Statement St = newConn.createStatement();
+                           
+                  ResultSet vaccineType  = St.executeQuery("SELECT * FROM `healthcentres` INNER JOIN healthcentrevaccines "
+                          + "ON healthcentres.healthCenterId = healthcentrevaccines.healthCenterId ");
+    while(vaccineType.next()){
+
+    out.println("  <tr>\n" +
+"      <th scope=\"row\">"+vaccineType.getString("healthCenterId")+"</th>\n" +
+        "      <th scope=\"row\">"+vaccineType.getString("healthCenterName")+"</th>\n" +
+"      <td>"+vaccineType.getString("totalPatients")+"</td>\n" +
+"      <td>"+vaccineType.getString("totalDoses")+"</td>\n" 
+       + "<td>"+vaccineType.getString("remainingDoses")+"</td>\n" +
+"      <td> </tr>");
+
+}
+    
+    Conn.closeConnection();
+
+            
 
             JspFragment f = getJspBody();
             if (f != null) {
@@ -64,10 +74,10 @@ public class RegisterVaccineHandler extends SimpleTagSupport {
             //
             // out.println("    </blockquote>");
         } catch (java.io.IOException ex) {
-            throw new JspException("Error in RegisterVaccineHandler tag", ex);
-        }          catch (SQLException ex) {
-                       Logger.getLogger(RegisterVaccineHandler.class.getName()).log(Level.SEVERE, null, ex);
-                   }
+            throw new JspException("Error in ShowHealthReportsHandler tag", ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(ShowHealthReportsHandler.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void setTable(String table) {

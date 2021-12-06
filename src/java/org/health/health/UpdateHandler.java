@@ -52,7 +52,7 @@ public class UpdateHandler extends SimpleTagSupport {
                 
       
       out.println("<script type='text/javascript'>alert('"+newValues[0]+" updated successfully');</script>");
-                 out.println("<script type='text/javascript'>window.location='healthAdministrator.jsp'</script>");
+                 out.println("<script type='text/javascript'>window.location='systemadminstrator.jsp'</script>");
       
                  
              }

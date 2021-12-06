@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Covid 19 Tracker System</title>
+  <title>Covid 19 Vaccination System</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -41,7 +41,7 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div id="logo">
-          <h1 style="color:#fff;">Group Three</h1>
+          <h1 style="color:#fff;">Group Two</h1>
 
         <!-- Uncomment below if you prefer to use a text logo -->
         <!--<h1><a href="index.html">Regna</a></h1>-->
@@ -60,7 +60,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Welcome to Covid 19 Tracker System</h1>
+      <h1>Welcome to Covid 19 Vaccination Tracker System</h1>
 
       <a href="bookVaccinationForm.jsp" class="btn-get-started">Book</a>
     </div>

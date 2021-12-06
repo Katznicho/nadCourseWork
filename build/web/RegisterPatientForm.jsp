@@ -59,7 +59,7 @@
 
                     <div class="m-3">
                         <label for="exampleFormControlInput1" class="form-label">Health Centre </label>
-                        <input type="text" class="form-control m-2" readonly="" value="<%=healthCentreName%>" />
+                        <input type="text" class="form-control m-2" readonly="" name="healthCenterName" value="<%=healthCentreName%>" />
                      
                     </div>
 

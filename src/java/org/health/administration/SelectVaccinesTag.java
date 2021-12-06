@@ -40,9 +40,12 @@ public class SelectVaccinesTag extends SimpleTagSupport {
             //
             // out.println("<strong>" + attribute_1 + "</strong>");
             // out.println("    <blockquote>");
-            String query = "SELECT * FROM vaccines";
-            //INSERT INTO `administrator` (`id`, `email`, `name`, `password`, `role`, `confirmPassword`, `healthCenterName`)
+//            String query = "SELECT * FROM vaccines";
 
+            String query = "SELECT * FROM healthcentrevaccines";
+
+            //INSERT INTO `administrator` (`id`, `email`, `name`, `password`, `role`, `confirmPassword`, `healthCenterName`)
+//`id`, `healthCenterId`, `batchNo`, `totalDoses`, `remainingDoses`
             PreparedStatement preparedStatement = newConn.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
 

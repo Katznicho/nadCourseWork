@@ -51,7 +51,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="login.jsp">Login</a></li>
-          <li><a class="nav-link scrollto" href="#services">Book</a></li>
+          <li><a class="nav-link scrollto" href="bookVaccinationForm.jsp">Book</a></li>
           
       </nav><!-- .navbar -->
     </div>
@@ -62,7 +62,7 @@
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Welcome to Covid 19 Tracker System</h1>
 
-      <a href="#about" class="btn-get-started">Book</a>
+      <a href="bookVaccinationForm.jsp" class="btn-get-started">Book</a>
     </div>
   </section><!-- End Hero Section -->
 
@@ -80,7 +80,7 @@
             <p class="cta-text"> We encourage all people to vaccinate .You can always book with us at all times.Stay Safe</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Book Now</a>
+            <a class="cta-btn align-middle" href="bookVaccinationForm.jsp">Book Now</a>
           </div>
         </div>
 

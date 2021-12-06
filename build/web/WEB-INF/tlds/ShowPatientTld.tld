@@ -25,4 +25,9 @@
     <tag-class>org.health.administration.ShowPatientHandler</tag-class>
     <body-content>scriptless</body-content>
   </tag>
+  <tag>
+    <name>ShowHealthCenterHandler</name>
+    <tag-class>org.health.health.ShowHealthCenterHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
 </taglib>

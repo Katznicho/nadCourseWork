@@ -12,6 +12,22 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+
+        <%@taglib  uri="/WEB-INF/tlds/RegisterPatient" prefix="patient" %>
+
+        <% String patientName = request.getParameter("name"); %>
+        <% String NIN = request.getParameter("nin"); %>
+        <% String healthCentreId = request.getParameter("healthCentreId");%>
+        <% String batchNumber = request.getParameter("batchNumber");%>
+        <% String days = request.getParameter("days");%>
+        <%=patientName + ',' + NIN + ',' + batchNumber + ',' + healthCentreId%>
+        
+        
+        <patient:RegisterPatientsHandler  tables="patients" values="<%=patientName + ',' + NIN +','+healthCentreId + ','+ batchNumber+','+days  %>" />
+
+        <%--<registerpatient:RegisterPatientsHandler table="patients" values="<%=patientName %>"></registerpatient:RegisterPatientsHandler>--%>
+
+
+
     </body>
 </html>

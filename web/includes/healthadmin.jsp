@@ -16,13 +16,21 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Dashboards Page</title>
     </head>
+     <%
+                        String healthCentreId = (String) request.getSession().getAttribute("healthCentreId");
+                        String healthCentreName = (String) request.getSession().getAttribute("healthCentreName");
+
+                    %>
+
   <!-- Sidebar -->
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-  <h3 class="w3-bar-item">Health Administrator Activities</h3>
+    <h3 class="w3-bar-item"><%= healthCentreName %></h3>
     <a href="healthAdministrator.jsp" class="w3-bar-item w3-button">Dasboard</a>
-  <a href="RegisterHealthCenterForm.jsp" class="w3-bar-item w3-button">Registers Health Centers</a>
+      <a href="RegisterPatientForm.jsp" class="w3-bar-item w3-button">Register Patients</a>
+
+  
   <a href="#" class="w3-bar-item w3-button">User activities</a>
-     <a href="#" class="w3-bar-item w3-button">Updates Health Center Information</a>
+     <a href="ShowHealthCenter.jsp" class="w3-bar-item w3-button">Updates Health Center Information</a>
   
   <a href="#" class="w3-bar-item w3-button">Provides necessary Reports</a>
   

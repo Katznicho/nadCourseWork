@@ -27,7 +27,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-      <jsp:include page="includes/healthadmin.jsp" />
+      <jsp:include page="includes/systemadmin.jsp" />
 
 <div class="w3-container">
             <div style="display: grid; place-items: center; margin:50px;  ;padding: 20px; border-radius: 10px;">

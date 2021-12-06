@@ -51,7 +51,7 @@ public class ShowVaccineHandler extends SimpleTagSupport {
 "      <td style='display:flex;align-items:center;justify-content:center;margin-left:-30px;'> "
         + "<p style='color:white;border-radius:5px; padding:5px;align-items:center; background-color:green'>"
         + ""+vaccineType.getString("status")+"</p></td>\n" +
-            "<td><button onClick='alert(\"am clicked\")'> </td>\n" +
+            "<td><button onClick='window.location=\"DistributeVaccines?details="+vaccineType.getString("batchNumber")+ ',' +vaccineType.getString("totalNumber")+','+vaccineType.getString("type")+"\"'>Distribute</button> </td>\n" +
 "    </tr>");
 
 }

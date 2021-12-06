@@ -3,24 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/web/SendEmail.jsp</file>
             <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/web/includes/systemadmin.jsp</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/GetTotalDozesHandler.java</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/ShowVaccineHandler.java</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/web/RegisterAdministratorForm.jsp</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/GetHealthAdministratorHandler.java</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/CalculateRemainingPercentageHandler.java</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/CalculatePercentageVaccinatedHandler.java</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/web/ShowVaccines.jsp</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/GetVaccineTYypesHandler.java</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/health/RegisterHealthCenterHandler.java</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/GetSystemAdminHandler.java</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/HealthCentreHandler.java</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/web/AddVaccineToDb.jsp</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/LoginServlet.java</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/GetCovidPatientsHandler.java</file>
             <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/web/systemadminstrator.jsp</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/db/connection/DBConnection.java</file>
-            <file>file:/C:/Users/hp/Desktop/java/new/nadCourseWork/src/java/org/health/administration/GetBookingHandler.java</file>
         </group>
     </open-files>
 </project-private>

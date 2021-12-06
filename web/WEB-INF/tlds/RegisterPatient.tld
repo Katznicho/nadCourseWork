@@ -20,4 +20,21 @@
           <listener-class>com.mycompany.TagLibListener</listener-class> 
       </listener>
     -->
+  <tag>
+    <name>RegisterPatientsHandler</name>
+    <tag-class>org.health.administration.RegisterPatientsHandler</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>tables</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>values</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
 </taglib>

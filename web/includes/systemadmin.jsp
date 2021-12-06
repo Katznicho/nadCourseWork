@@ -20,8 +20,9 @@
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
   <h3 class="w3-bar-item">System Administrator Activities</h3>
    <a href="systemadminstrator.jsp" class="w3-bar-item w3-button">Dashboard</a>
-  <a href="RegisterPatientForm.jsp" class="w3-bar-item w3-button">Register Patients</a>
+
   <a href="RegisterAdministratorForm.jsp" class="w3-bar-item w3-button">Register Health Administrator</a>
+    <a href="RegisterHealthCenterForm.jsp" class="w3-bar-item w3-button">Registers Health Centers</a>
      <a href="#" class="w3-bar-item w3-button">Send Email</a>
   
   <a href="RegisterVaccineServlet" class="w3-bar-item w3-button">Register Vaccines</a>
